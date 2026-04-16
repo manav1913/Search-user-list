@@ -1,4 +1,4 @@
-import Users from "./MovieComponents/Users"
+import Users from "./UserComponents/Users"
 
 
 function App() {
