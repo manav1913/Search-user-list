@@ -4,9 +4,13 @@ import users from './Data'
 const Users = () => {
     const [userList, setuserList] = useState(users)
 
-    const filterUser = (user) => {
-      if(user.target.value === ""){
+    const filterUser = (e) => {
+      const value = e.target.value.toLowerCase()
+      if(value === ""){
         setuserList(users)
+      }else{
+          const filteredUser = users.filter((user)=> user.name.toLowerCase().includes(value))
+          setuserList(filteredUser)
       }
     }
 
